@@ -14,6 +14,9 @@ class Spree::ActiveShippingConfiguration < Spree::Preferences::Configuration
 
   preference :canada_post_login, :string, :default => "canada_post_login"
 
+  preference :dhl_site_id, :string, :default => "dhl_site_id"
+  preference :dhl_password, :string, :default => "dhl_password"
+
   preference :units, :string, :default => "imperial"
   preference :unit_multiplier, :integer, :default => 16 # 16 oz./lb - assumes variant weights are in lbs
   preference :default_weight, :integer, :default => 0 # 16 oz./lb - assumes variant weights are in lbs
