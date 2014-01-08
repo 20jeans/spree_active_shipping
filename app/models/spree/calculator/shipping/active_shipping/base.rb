@@ -104,7 +104,7 @@ module Spree
             end
             rate_hash = Hash[*rates.flatten]
             return rate_hash
-          rescue ActiveMerchant::ActiveMerchantError => e
+          rescue ActiveMerchant::ActiveMerchantError, ActiveMerchant::Shipping::ResponseContentError => e
 
             if [ActiveMerchant::ResponseError, ActiveMerchant::Shipping::ResponseError].include?(e.class) && e.response.is_a?(ActiveMerchant::Shipping::Response)
               params = e.response.params
