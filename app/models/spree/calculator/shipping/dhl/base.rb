@@ -2,7 +2,7 @@ require_dependency 'spree/calculator'
 
 module Spree
   module Calculator::Shipping
-    module DHL
+    module Dhl
       class Base < Spree::Calculator::Shipping::ActiveShipping::Base
         def carrier
           carrier_details = {
